@@ -1,10 +1,11 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 
+// 定義兩個不同的圖片路徑
+const mobileImage = require('./assets/mobile.png');
+const desktopImage = require('./assets/desktop.png');
+
 const App = () => {
-  // 定義兩個不同的圖片路徑
-  const mobileImage = './assets/mobile.png';
-  const desktopImage = './assets/desktop.png';
 
   // 根據設備類型選擇要顯示的圖片
   const image = isMobile ? mobileImage : desktopImage;
