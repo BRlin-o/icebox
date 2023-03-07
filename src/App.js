@@ -3,8 +3,8 @@ import { isMobile } from 'react-device-detect';
 
 const App = () => {
   // 定義兩個不同的圖片路徑
-  const mobileImage = 'https://github.com/BRlin-o/icebox/blob/main/src/assets/mobile.png';
-  const desktopImage = 'https://github.com/BRlin-o/icebox/blob/main/src/assets/desktop.png';
+  const mobileImage = './assets/mobile.png';
+  const desktopImage = './assets/desktop.png';
 
   // 根據設備類型選擇要顯示的圖片
   const image = isMobile ? mobileImage : desktopImage;
