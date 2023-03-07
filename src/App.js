@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { isMobile } from 'react-device-detect';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  // 定義兩個不同的圖片路徑
+  const mobileImage = './assets/mobile.png';
+  const desktopImage = './assets/desktop.png';
+
+  // 根據設備類型選擇要顯示的圖片
+  const image = isMobile ? mobileImage : desktopImage;
+
+  // 使用 img 標籤來顯示圖片，並且設置 width 和 height 為 100% 來適應設備尺寸
+  return <img src={image} alt="Example" style={{ width: '100%', height: '100%' }} />;
+};
 
 export default App;
